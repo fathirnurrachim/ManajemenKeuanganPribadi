@@ -32,10 +32,12 @@ func main() {
 		fmt.Scan(&expense)
 
 		// Validasi saat expense error
-		for expense < 0 {
-			fmt.Println("Error: Expense tidak boleh negatif!")
-			fmt.Println("Masukkan Expense :")
-			fmt.Scan(&expense)
+		if expense < 0 {
+			for expense < 0 {
+				fmt.Println("Error: Expense tidak boleh negatif!")
+				fmt.Println("Masukkan Expense :")
+				fmt.Scan(&expense)
+			}
 		}
 
 		// Menambahkan expense ke total expense
